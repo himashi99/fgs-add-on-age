@@ -20,11 +20,11 @@
 
 
 
-const containers = document.querySelectorAll('li.swap');
-const swappable = new Swappable.default(containers, {
-  draggable: 'div',
+const ideasMarketGrid = document.querySelectorAll('div.ideas-to-market-grid');
+const swappableIdeas = new Swappable.default(ideasMarketGrid, {
+  draggable: '.ideas-to-market-drag',
   mirror: {
-    appendTo: containers,
+    // appendTo: ideasMarketGrid,
     constrainDimensions: true,
   },
 });
