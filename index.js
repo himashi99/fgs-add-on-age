@@ -38,7 +38,11 @@ const swappableIdeas = new Swappable.default(ideasMarketGrid, {
 
 const containers1 = document.querySelectorAll('ul.yo')
 const draggable = new Draggable.default(containers1, {
-  draggable: 'li'
+  draggable: 'li',
+  mirror: {
+    // appendTo: ideasMarketGrid,
+    constrainDimensions: true,
+  },
 });
 
 draggable.on('drag:start', () => console.log('drag:start'));
