@@ -118,19 +118,18 @@ const swappable1 = new Swappable.default(capabilitiesGrid, {
 // Range Slider
 
 $( document ).ready(function() {
-  var gewichtslider = document.getElementById('slider_gewicht');
+  var innovationSlider = document.getElementById('slider_innovation');
 
-  noUiSlider.create(gewichtslider, {
-      start: [ 5 ],
+  noUiSlider.create(innovationSlider, {
+      start: [ 0 ],
       snap: true,
       connect: true,
       range: {
           'min': 0,
-          '13%': 5,
-          '35.5%': 10,
-          '59%': 15,
-          '82.5%': 20,
-          'max': 25
+          '24.5%': 5,
+          '49.5%': 10,
+          '75': 15,
+          'max': 20
       },
       format: {
           from: function(value) {
@@ -142,42 +141,29 @@ $( document ).ready(function() {
       }
   });
 
-  var tipHandles = gewichtslider.getElementsByClassName('noUi-handle'),
-    tooltips = [];
-
-  // Add divs to the slider handles.
-  for ( var i = 0; i < tipHandles.length; i++ ){
-      tooltips[i] = document.createElement('div');
-      tooltips[i].setAttribute('class', 'tooltipdiv');
-      tipHandles[i].appendChild(tooltips[i]);
-  }
-
-  // When the slider changes, write the value to the tooltips.
-  // gewichtslider.noUiSlider.on('update', function( values, handle, unencoded ){
-  //     tooltips[handle].innerHTML = Math.floor(values[handle]);
-  // });
+ 
 
 
 
-var rangeSliderValueElement = document.getElementById('slider-range-value');
-gewichtslider.noUiSlider.on('update', function (values, handle) {
+let rangeSliderValueElement = document.getElementById('slider-range-value');
+innovationSlider.noUiSlider.on('update', function (values, handle) {
   rangeSliderValueElement.innerHTML = values[handle];
-console.log(rangeSliderValueElement.innerHTML)
+
 
 let description = document.getElementById('step-description');
 
 // Update text box based on value of range slider
 switch(rangeSliderValueElement.innerHTML) {
-case '5':
+case '0':
   description.innerHTML = "Access - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
-case '10':
+case '5':
   description.innerHTML = " Define - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
-case '15':
+case '10':
   description.innerHTML = "Test - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
-case '20':
+case '15':
   description.innerHTML = "Validate - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
 case '25':

@@ -112,9 +112,11 @@ crossorigin="anonymous"
     </div>
 </div>
   
-  <div class = "image-container">
-  <div class="image-wrapper">
-    <div id="slider_gewicht"></div>
+  <div class = "range-slider-container">
+ 
+    <div class="range-slider-wrapper">
+        <div id="slider_innovation"></div>
+    </div>
     <div class="grid-range">
       <div class="slider-box first-slider-box"></div>
       <div class="slider-box"></div>
@@ -127,23 +129,21 @@ crossorigin="anonymous"
       <div class="slider-box-title">Validate</div>
       <div class="slider-box-title">Launch</div>
     </div>
-  </div>  <!--  End Innovation Section -->  
+
+    <!-- Used in the JS file to display explanations
+    Displays value of slider - will be hidden by CSS -->
+    <span class="example-val" id="slider-range-value"></span>
+  
  
-  
-  <div class="fgs-section how-it-works-section">
-    <div class="section-title-copy how-it-works-title">
-      <span>Price</span>
-      <span class="example-val" id="slider-range-value"></span>
-    </div>
   </div>
-  
-  </div>
-  </div>
+
   <div class="work-explanation">
-    <div class="explanation-text-wrapper">
-       <p id="step-description"></p>
+      <div class="explanation-text-wrapper">
+         <p id="step-description"></p>
+      </div>
     </div>
-  </div>
+  </div>  <!--  End Innovation Section --> 
+  
 
 <!-- Capabilities Section -->
 <div class="fgs-section capabilities-section">
