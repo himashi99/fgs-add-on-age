@@ -19,10 +19,10 @@ ul {
 }
 
 .draggable-mirror {
-  opacity: 0.7;
+  /* opacity: 0.7;
   box-shadow: 0 0 10px;
-  /* transform: rotate(-45deg); */
-  color: green;
+
+  color: green; */
 }
 
 .section-title-copy {
@@ -160,6 +160,10 @@ ul {
   text-align: center;
 }
 
+.strategy-wrapper {
+  background: linear-gradient(to bottom, #ffffff 63%, #242E5B 37%);
+}
+
 .strategy-wrapper ul {
   padding-left: 15%;
   padding-right: 15%;
@@ -186,7 +190,7 @@ ul {
 
 .strategy-wrapper ul > .strategy-drop {
   height: 150px;
-  border: 3px solid #242E5B;
+  border: 3px solid #000000;
 }
 
 .strategy-wrapper ul > .strategy-titles {
@@ -247,9 +251,43 @@ ul {
   grid-area: p;
 }
 
+.strategy-drop {
+  background-color: #6CCACD;
+}
 
+.strategy-grid-text {
+  color: #242E5B;
+}
 
+.strategy-grid-text div {
+  max-width: 230px;
+  text-align: center;
+}
 
+.strategy-grid-text h2 {
+  font-size: 1.2rem;
+}
+
+.strategy-titles {
+  color: #ffffff;
+}
+
+/* --------------------------------  Innovation Section ------------------------------------ */
+.innovation-section {
+  background-color: #242E5B;
+}
+
+.innovation-section h1 {
+  color: #ffffff;
+}
+
+.heading-wrapper {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  color: white;
+}
+/* -------------------------------- End Innovation Section ------------------------------------ */
 
 .how-it-works-section {
   background-color: #242E5B;
@@ -403,13 +441,13 @@ a:hover{
   color: #ffffff;
 }
 
-.capabilities-image {
+.capabilities-wrapper {
   /* padding-top: 130px; */
   padding-left: 15%;
   padding-right: 15%;
 }
 
-.capabilities {
+.capabilities-grid {
   height: 500px;
   display: grid;
   grid-gap: 20px;
@@ -423,7 +461,7 @@ a:hover{
   'i i i i j j'
 }
 
-.capabilities div {
+.capabilities-grid div {
   /* width: 100px; */
   display: flex;
   justify-content: center;
@@ -434,49 +472,49 @@ a:hover{
   /* height: 75px; */
 }
 
-.capabilities div:first-child {
+.capabilities-grid div:first-child {
   grid-area: a;
   background-color: #ffffff;
   color: #242E5B;
 }
 
-.capabilities div:nth-child(2) {
+.capabilities-grid div:nth-child(2) {
   grid-area: b;
 }
 
-.capabilities div:nth-child(3) {
+.capabilities-grid div:nth-child(3) {
   grid-area: c;
 }
 
-.capabilities div:nth-child(4) {
+.capabilities-grid div:nth-child(4) {
   grid-area: d;
 }
 
-.capabilities div:nth-child(5) {
+.capabilities-grid div:nth-child(5) {
   grid-area: e;
 }
 
-.capabilities div:nth-child(6) {
+.capabilities-grid div:nth-child(6) {
   grid-area: f;
   background-color: #ffffff;
   color: #242E5B;
 }
 
-.capabilities div:nth-child(7) {
+.capabilities-grid div:nth-child(7) {
   grid-area: g;
 }
 
-.capabilities div:nth-child(8) {
+.capabilities-grid div:nth-child(8) {
   grid-area: h;
 }
 
-.capabilities div:nth-child(9) {
+.capabilities-grid div:nth-child(9) {
   grid-area: i;
   background-color: #ffffff;
   color: #242E5B;
 }
 
-.capabilities div:nth-child(10) {
+.capabilities-grid div:nth-child(10) {
   grid-area: j;
 }
 
@@ -520,4 +558,211 @@ a:hover{
   height: 100px;
   border: 3px solid #242E5B;
 }
+
+.inner-drag {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Range Slider */
+
+body {
+  /* padding: 100px; */
+  /* background-color: #242E5B; */
+}
+
+
+
+.heading-wrapper h3 {
+  color: #6CCACD;
+}
+
+#slider_gewicht {
+  position: relative;
+  top: 109px;
+  left: 35px;
+}
+
+.noUi-handle {
+  outline: none;
+}
+
+.noUi-handle:focus {
+  outline: none;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  right: 0px;
+}
+
+.noUi-handle.noUi-handle-lower {
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 80px;
+  height: 80px;
+}
+
+.noUi-handle {
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    background: #FFF;
+    cursor: pointer;
+    box-shadow: inset 0 0 1px #FFF;
+}
+
+.noUi-horizontal {
+    height: 6px;
+    width: 430px;
+    bottom: 6px;
+}
+.noUi-connects {
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+.image-wrapper {
+  position: relative
+}
+
+.grid-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+  top: 50px;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -40px;
+/*     left: 3px; */
+    background-color: #6CCACD;
+}
+
+.work-explanation {
+    position: relative;
+    top: 100px;
+    background-color: #6CCACD;
+    height: 240px;
+    /* width: 700px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.explanation-text-wrapper {
+    padding: 100px;
+    color: white;
+}
+
+#step-description {
+  line-height: 28px;
+}
+
+
+.slider-box {
+/*   width: 100px; */
+  height: 100px;
+  border-top: 4px solid #ffffff; 
+  border-bottom: 4px solid #ffffff; 
+  border-right: 4px solid #ffffff; 
+}
+
+.grid > div:nth-child(6) {
+/*   border-left: 4px solid #ffffff; */
+}
+
+.grid-range > div:nth-child(1) {
+/*   border-left: 4px solid #ffffff; */
+}
+
+.first-slider-box {
+  border-left: 4px solid #ffffff;
+}
+
+.slider-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: white;  
+}
+
+.slider-wrapper1 {
+  position: relative;
+  bottom: 5px;
+}
+
+.slide-box {
+  width: 100px;
+  border-right: 3px solid #ffffff;
+}
+
+.slide-box:last-child {
+  border-right: none;
+}
+
+.slider-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-button-wrapper input {
+  width: 95%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  background: #ffffff;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  height: 4px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+.slider::-moz-range-thumb {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+a {
+  color: blue;
+}
+a:hover{
+  color: purple;
+}
+
+.slider-box {
+/*   border-left: 3px solid white; */
+}
+
+
+
 

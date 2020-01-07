@@ -4,6 +4,9 @@
 <title>Page Title</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 
+<!-- noUiSlider CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css" rel="stylesheet">
+
 <!-- Google Font Import -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
@@ -16,6 +19,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.legacy.js"></script>
 <!-- Draggable only -->
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/droppable.js"></script>
+
 <!-- Sortable only -->
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
 <!-- Swappable only -->
@@ -29,8 +35,17 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins/resize-mirror.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"></script>
+
+<!-- jQuery CDN -->
+<script
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+crossorigin="anonymous"
+></script>
 
 
+<!-- Hero Section -->
 <div class='fgs-section hero-section'>
   <div class="hero-title">
   <div class='fgs-logo'>
@@ -54,8 +69,9 @@
       <div class="ideas-to-market-drag">10</div>
     </div>
   </div>
-</div>
+</div> <!-- End Hero Section-->
 
+<!-- About Ua Section -->
 <div class="fgs-section about-us-section">
   <div class="section-title-copy about-us-title">
   <h3 class="heading">About Us</h3>
@@ -68,14 +84,14 @@
 
 
   <div class="strategy-wrapper">
-     <ul class="yo">
-       <li class='strategy-drag'><div>Drag</div></li>
-       <li class='strategy-grid-text'><div>Add FinTech Expertise to your strategy</div></li>
-       <li class='strategy-drop'><div>Drop 1</div></li>
-       <li class='strategy-drop'><div>Drop 2</div></li>
-       <li class='strategy-drop'><div>Drop 3</div></li>
-       <li class='strategy-drop'><div>Drop 4</div></li>
-       <li class='strategy-drop'><div>Drop 5</div></li>
+     <ul class="strategy-grid">
+       <li class='strategy-drag'Drag</li>
+       <li class='strategy-grid-text'><div><h2>Add FinTech Expertise to your strategy</h2></div></li>
+       <li class='strategy-drop'>1</li>
+       <li class='strategy-drop'><div><h3>Drop 2</h3></div></li>
+       <li class='strategy-drop'><div><h3>Drop 3</h3></div></li>
+       <li class='strategy-drop'><div><h3>Drop 4</h3></div></li>
+       <li class='strategy-drop'><div><h3>Drop 5</h3></div></li>
        <li class='strategy-titles'><div>Assess</div></li>
        <li class='strategy-titles'><div>Define</div></li>
        <li class='strategy-titles'><div>Test</div></li>
@@ -83,39 +99,53 @@
        <li class='strategy-titles'><div>Launch</div></li>
      </ul>
 </div>
-</div>
-<div class="fgs-section how-it-works-section">
-  <div class="section-title-copy how-it-works-title">
-  <h3 class="heading">How does it work?</h3>
-  <h1 class="subheading">We want you to fail at $5K vs. $5M</h1>
-  <div class="section-description how-it-works-text">
-      <p>We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase innovation enables your team to accelerate the cycles for getting new products to market. </p> 
+</div> <!-- End About Us Section -->
+
+
+<!-- Innovation Section -->
+<div class="fgs-section innovation-section">
+<div class="heading-wrapper">
+    <h3 class="heading">How does it work?</h3>
+    <h1 class="subheading">We want you to fail at $5K vs. $5M</h1>
+    <div class="section-description how-it-works-text">
+        <p>We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase innovation enables your team to accelerate the cycles for getting new products to market. </p> 
     </div>
 </div>
-
-
-<div class="image-wrapper">
-  <div class="grid-range">
-    <div class="slider-box-title"> Access</div>
-    <div class="slider-box-title">Define</div>
-    <div class="slider-box-title">Test</div>
-    <div class="slider-box-title">Validate</div>
-    <div class="slider-box-title">Launch</div>
+  
+  <div class = "image-container">
+  <div class="image-wrapper">
+    <div id="slider_gewicht"></div>
+    <div class="grid-range">
+      <div class="slider-box first-slider-box"></div>
       <div class="slider-box"></div>
       <div class="slider-box"></div>
       <div class="slider-box"></div>
       <div class="slider-box"></div>
-      <div class="slider-box"></div>
+      <div class="slider-box-title"> Access</div>
+      <div class="slider-box-title">Define</div>
+      <div class="slider-box-title">Test</div>
+      <div class="slider-box-title">Validate</div>
+      <div class="slider-box-title">Launch</div>
+    </div>
+  </div>  <!--  End Innovation Section -->  
+ 
+  
+  <div class="fgs-section how-it-works-section">
+    <div class="section-title-copy how-it-works-title">
+      <span>Price</span>
+      <span class="example-val" id="slider-range-value"></span>
+    </div>
   </div>
-  <div class="slider-wrapper1">
-      <div class="slider-button-wrapper">
-          <input type="range" min="-0.5" max="50.5" value="0" class="slider" id="myRange" step="12.7">
-        </div>
+  
   </div>
-</div>
+  </div>
+  <div class="work-explanation">
+    <div class="explanation-text-wrapper">
+       <p id="step-description"></p>
+    </div>
+  </div>
 
-</div>
-
+<!-- Capabilities Section -->
 <div class="fgs-section capabilities-section">
     <div class="section-title-copy capabilities-title">
         <h3 class="heading">How can we help you?</h3>
@@ -125,25 +155,26 @@
           </div>
       </div>
      
-  <div class="capabilities-image">
-    <div class="capabilities">
-      <div class="isDraggable">Building new Products</div>
-      <div class="isDraggable">Industry Analysis</div>
-      <div class="isDraggable">Pilot Strategy & Execution</div>
-      <div class="isDraggable">User research</div>
-      <div class="isDraggable">Strategy Sprints</div>
-      <div class="isDraggable">Design + Commercialize</div>
-      <div class="isDraggable">UX & UI Design</div>
-      <div class="isDraggable">Business Model Design</div>
-      <div class="isDraggable">Workshop Design & Facilitation</div>
-      <div class="isDraggable">Rapid Prototyping</div>
+  <div class="capabilities-wrapper">
+    <div class="capabilities-grid">
+      <div>Building new Products</div>
+      <div class="isDraggable"><div class="inner-drag">Industry Analysis</div></div>
+      <div class="isDraggable"><div class="inner-drag">Pilot Strategy & Execution</div></div>
+      <div class="isDraggable"><div class="inner-drag">User research</div></div>
+      <div class="isDraggable"><div class="inner-drag">Strategy Sprints</div></div>
+      <div>Design + Commercialize</div>
+      <div class="isDraggable"><div class="inner-drag">UX & UI Design</div></div>
+      <div class="isDraggable"><div class="inner-drag">Business Model Design</div></div>
+      <div>Workshop Design & Facilitation</div>
+      <div class="isDraggable"><div class="inner-drag">Rapid Prototyping</div></div>
     </div>
   </div>
   <div class="offerings-link">
   <h3><a href = "">View our full list of offerings</a></h3>
 </div>
-</div>
+</div> <!-- End Capabilities Section -->
 
+<!-- Chat Section -->
 <div class="fgs-section chat-section">
   <div class="chat-wrapper">
   <div class = "section-title-copy chat-title">
@@ -157,11 +188,9 @@
 <div class="chat-empty-box"> </div>
 </div>
 </div>
+</div> <!-- End Chat Section -->
 
-
-
-</div>
-
+<!-- Javascript File -->
 <script type="text/javascript" src="index.js"></script>
 
 </body>
