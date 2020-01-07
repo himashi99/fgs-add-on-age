@@ -272,12 +272,12 @@ ul {
   color: #ffffff;
 }
 
-/* --------------------------------  Innovation Section ------------------------------------ */
-.innovation-section {
+/* --------------------------------  How it Works Section ------------------------------------ */
+.how-it-works-section {
   background-color: #242E5B;
 }
 
-.innovation-section h1 {
+.how-it-works-section h1 {
   color: #ffffff;
 }
 
@@ -351,6 +351,9 @@ ul {
   top: -34px !important;
 }
 
+
+/* End Range Slider Parts */
+
 .work-explanation {
   background-color: #6CCACD;
   height: 240px;
@@ -366,12 +369,18 @@ ul {
   padding: 100px;
   color: white;
 }
-/* -------------------------------- End Innovation Section ------------------------------------ */
+
+#step-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+/* -------------------------------- End How it Works Section ------------------------------------ */
 
 .how-it-works-section {
   background-color: #242E5B;
   /* only need to set if position relative on iamge */
-  height: 800px;
+  /* height: 800px; */
 }
 
 .how-it-works-title, .how-it-works-text {
@@ -621,9 +630,7 @@ body {
 
 
 
-#step-description {
-  line-height: 28px;
-}
+
 
 
 .slider-box {

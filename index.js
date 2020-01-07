@@ -127,7 +127,7 @@ $( document ).ready(function() {
       range: {
           'min': 0,
           '24.5%': 5,
-          '49.5%': 10,
+          '50%': 10,
           '75': 15,
           'max': 20
       },
@@ -166,7 +166,7 @@ case '10':
 case '15':
   description.innerHTML = "Validate - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
-case '25':
+case '20':
   description.innerHTML = "Launch - We offer true innovation, which is why we are not afraid to pivot. Our proven 5 Phase Innovation enables your team to accelerate the cycles for getting new products to market.";
   break;
 }
