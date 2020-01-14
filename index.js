@@ -176,7 +176,24 @@ case '20':
 });
 
 
-var la = document.getElementById('slider_gewicht');
+// Our Capabilities
+
+const containerSelector = '#GridLayout .BlockLayout';
+  const containers = document.querySelectorAll(containerSelector);
+
+const swappable = new Draggable.Swappable(containers, {
+    draggable: '.Block--isDraggable',
+    mirror: {
+      appendTo: containerSelector,
+      cconstrainDimensions: true,
+    },
+    plugins: [Plugins.ResizeMirror],
+  });
+
+// const sortable = new Sortable(document.querySelectorAll('ul'), {
+//   draggable: 'li',
+//   plugins: [Plugins.ResizeMirror]
+// });
 
 
 

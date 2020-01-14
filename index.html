@@ -33,9 +33,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins/resize-mirror.js"></script>
+<script src="`"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"></script>
+<!-- Our Capabilities -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.2/lib/draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins/resize-mirror.js"></script>
 
 <!-- jQuery CDN -->
 <script
@@ -52,6 +57,7 @@ crossorigin="anonymous"
     <img src='assets/logo.png' height='96px'>
   </div>
   <h2 id="corporate-text">Corporate</h4>
+  <hr></hr>
   <h1>Startup Innovators.</h1>
   <h2>FinTech Experts.</h3>
   </div>
@@ -155,20 +161,82 @@ crossorigin="anonymous"
           </div>
       </div>
      
-  <div class="capabilities-wrapper">
-    <div class="capabilities-grid">
-      <div>Building new Products</div>
-      <div class="isDraggable"><div class="inner-drag">Industry Analysis</div></div>
-      <div class="isDraggable"><div class="inner-drag">Pilot Strategy & Execution</div></div>
-      <div class="isDraggable"><div class="inner-drag">User research</div></div>
-      <div class="isDraggable"><div class="inner-drag">Strategy Sprints</div></div>
-      <div>Design + Commercialize</div>
-      <div class="isDraggable"><div class="inner-drag">UX & UI Design</div></div>
-      <div class="isDraggable"><div class="inner-drag">Business Model Design</div></div>
-      <div>Workshop Design & Facilitation</div>
-      <div class="isDraggable"><div class="inner-drag">Rapid Prototyping</div></div>
-    </div>
-  </div>
+      <section id="GridLayout" class="GridLayout">
+        <article class="BlockLayout BlockLayout--typeGrid">
+          <div class="BlockWrapper">
+            <span class="Block Block--item1">
+              <div class="BlockContent">
+                <h3 class="Heading Heading--size2 text-no-select">Building New Products</h3>
+              </div>
+            </span>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item2 Block--isDraggable" title="Industry">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">Industry Analysis</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item3 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">Pilot Strategy & Execution</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item4 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">User Research</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item5 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">Strategy Sprints</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <span class="Block Block--item6">
+              <div class="BlockContent">
+                <h3 class="Heading Heading--size2 text-no-select">Design + Commercialize</h3>
+              </div>
+            </span>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item7 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">UX & UI Design</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item8 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">Business Model Design</h3>
+              </div>
+            </a>
+          </div>
+          <div class="BlockWrapper">
+            <span class="Block Block--item9">
+              <div class="BlockContent">
+                <h3 class="Heading Heading--size2 text-no-select">Workshop Design & Facilitation</h3>
+              </div>
+            </span>
+          </div>
+          <div class="BlockWrapper">
+            <a href="#" class="Block Block--item10 Block--isDraggable" title="Click to drag">
+               <div class="BlockContent">
+                 <h3 class="Heading Heading--size2 text-no-select">Rapid Prototyping</h3>
+              </div>
+            </a>
+          </div>
+         
+          </article> 
+        </section>
+
   <div class="offerings-link">
   <h3><a href = "">View our full list of offerings</a></h3>
 </div>
