@@ -1,24 +1,3 @@
-// const containers = document.querySelectorAll('li');
-// const sortable = new Sortable.default(containers, {
-//   draggable: 'div',
-//   appendTo: 'body',
-//   // mirror: {
-//   //   constrainDimensions: false,
-//   //   cursorOffsetX: 10,
-//   //   cursorOffsetY: 10,
-//   //   xAxis: false
-//   // },
-// });
-
-// sortable.on('drag:start', (event) => {
-//   event.originalSource.classList.add('original-source');
-// });
-
-// sortable.on('drag:stop', (event) => {
-//   event.originalSource.classList.remove('original-source');
-// });
-
-
 // Ideas to Market Graphic
 const ideasMarketGrid = document.querySelectorAll('div.ideas-to-market-grid');
 const swappableIdeas = new Swappable.default(ideasMarketGrid, {
@@ -29,93 +8,51 @@ const swappableIdeas = new Swappable.default(ideasMarketGrid, {
   },
 });
 
-// swappable.on('swappable:start', () => console.log('swappable:start'));
-// swappable.on('swappable:swapped', () => console.log('swappable:swapped'));
-// swappable.on('swappable:stop', () => console.log('swappable:stop'));
+// About Us Section Graphic
+
+// jQuery Drag and Droppable
+
+(function ($) {
+  var lastPlace;
+
+  $("#choices li img").draggable({
+      revert: true,
+      zIndex: 10,
+      snap: "#answers li",
+      snapMode: "inner",
+      snapTolerance: 40,
+      // helper: "clone",
+  });
+
+  $(".strategy-drop").droppable({
+      drop: function (event, ui) {
+      var dropped = ui.draggable;
+      var droppedOn = this;
+
+      if ($(droppedOn).children().length > 0) {
+             
+}
+
+          $(dropped).detach().css({
+              top: 0,
+              left: 0
+          }).prependTo($(droppedOn));
+      }
+  });
+})(jQuery);
 
 
+// Sortable Shopify Library
 
-// Strategy Graphic
-// const strategyGrid = document.querySelectorAll('ul.strategy-grid')
-// const swappableStrategies = new Draggable.default(strategyGrid, {
-//   draggable: '.drago',
-//   dropzone: '.strategy-drop',
-// });
-
-const droppable = new Droppable.default(document.querySelectorAll('.strategy-grid'), {
-  draggable: '.drago', 
-  dropzone: '.strategy-drop'
-});
-
-droppable.on('droppable:dropped', () => console.log('droppable:dropped'));
-droppable.on('droppable:returned', () => console.log('droppable:returned'));
-
-// draggable.on('drag:start', () => console.log('drag:start'));
-// draggable.on('drag:move', () => console.log('drag:move'));
-// draggable.on('drag:stop', () => console.log('drag:stop'));
+const sortable = new Draggable.Sortable(
+document.querySelectorAll('#answers'), {
+  draggable: 'li',
+  delay: 0,
+}
+)
 
 
-
-
-// const containerSelector = '.capabilities';
-// const containers11 = document.querySelectorAll(containerSelector);
-
-// const swappable11 = new Swappable.default(containers11, {
-//   draggable: '.Block--isDraggable',
-//   mirror: { 
-//     appendTo: containerSelector,
-//     constrainDimensions: true,
-//   },
-//   plugins: [Plugins.ResizeMirror],
-// });
-
-
-
-
-// Capabilities Graphic
-// const containers2 = document.querySelectorAll('capabilities')
-// const capabilitiesGrid = document.querySelectorAll('.capabilities-grid');
-
-// const swappableCapabilities = new Draggable.Swappable.default(capabilitiesGrid, {
-//   draggable: '.isDraggable',
-//   mirror: {
-//     appendTo: capabilitiesGrid,
-//     constrainDimensions: true,
-//   },
-//   plugins: [Plugins.ResizeMirror],
-// });
-
-
-// swappableCapabilities.on('swappable:start', (a) => console.log('swappable:start', a));
-// swappableCapabilities.on('swappable:swapped', (a) => console.log('swappable:swapped', a));
-// swappableCapabilities.on('swappable:stop', () => console.log('swappable:stop'));
-const capabilitiesGrid = document.querySelectorAll('.capabilities-grid');
-const swappable1 = new Swappable.default(capabilitiesGrid, {
-    draggable: '.inner-drag',
-    mirror: {
-      constrainDimensions: true,
-      cursorOffsetX: 70,
-      cursorOffsetY: 0,
-    },
-    plugins: [Plugins.ResizeMirror],
-  })
-
-// swappable1.on('drag:start', () => {
-// 	console.log('drag:start')
-// })
-// swappable1.on('swappable:swapped', () => {
-// 	console.log('drag:swapped')
-// })
-// swappable1.on('drag:stop', () => {
-// 	console.log('drag:stop')
-// })
-// swappable1.on('drag:move', () => {
-// 	console.log('drag:move')
-// })
-
-
-
-// Range Slider
+// Range Slider Graphic
 
 $( document ).ready(function() {
   var innovationSlider = document.getElementById('slider_innovation');
@@ -141,9 +78,7 @@ $( document ).ready(function() {
       }
   });
 
- 
-
-
+// Range Slider Text Logic
 
 let rangeSliderValueElement = document.getElementById('slider-range-value');
 innovationSlider.noUiSlider.on('update', function (values, handle) {
@@ -175,7 +110,6 @@ case '20':
 
 });
 
-
 // Our Capabilities
 
 const containerSelector = '#GridLayout .BlockLayout';
@@ -185,15 +119,50 @@ const swappable = new Draggable.Swappable(containers, {
     draggable: '.Block--isDraggable',
     mirror: {
       appendTo: containerSelector,
-      cconstrainDimensions: true,
+      constrainDimensions: true,
+      cursorOffsetX: 70,
+      cursorOffsetY: 0,
     },
     plugins: [Plugins.ResizeMirror],
   });
 
-// const sortable = new Sortable(document.querySelectorAll('ul'), {
-//   draggable: 'li',
-//   plugins: [Plugins.ResizeMirror]
-// });
+  // This line of code makes the "About Us" section stop working
+  swappable.on('drag:start', (e) => {
+    console.log('drag:start');
+    console.log(e.mirror);
+    // e.originalSource.style.backgroundColor='blue';
+    e.mirror.style.backgroundColor = '#6CCACD';
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
