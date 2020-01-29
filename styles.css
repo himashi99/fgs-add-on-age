@@ -758,7 +758,100 @@ a:hover{
 }
 
 
+#GridLayout2 {
+  max-width: 800px;
+  margin: 0 auto;
+  /* background-color: springgreen; */
+  display: flex;
+  justify-content: center;
+  padding: 110px;
+}
 
+.GridLayout2 .BlockLayout--typeGrid2 {
+  transform: rotate(-45deg);
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: repeat(4, 6rem);
+  grid-template-areas:
+  'a b c d'
+  'e f f g'
+  'h f f i'
+  'j k l m'
+}
+
+.BlockWrapper2 {
+  position: relative;
+}
+
+.GridLayout2 .BlockWrapper2:first-child {
+  grid-area: b;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(2) {
+  grid-area: c;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(3) {
+  grid-area: d;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(4) {
+  grid-area: f;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(5) {
+  grid-area: g;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(6) {
+  grid-area: i;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(7) {
+  grid-area: j;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(8) {
+  grid-area: k;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(9) {
+  grid-area: l;
+}
+
+.GridLayout2 .BlockWrapper2:nth-child(10) {
+  grid-area: m;
+}
+
+.Block--isDraggable2 .BlockContent2 {
+  color: #242E5B;
+  background-color: transparent;
+  border-color: currentColor;
+  border: 2px solid #242E5B;
+}
+
+.BlockContent2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 6rem;
+  height: 100%;
+  color: #242E5B;
+  background-color: white;
+  width: 6rem;
+/*     border: .6rem solid black; */
+}
+
+.BlockContent2.ideas-to-market-text {
+  width: auto;
+}
+
+.ideas-to-market-text h3 {
+  transform: rotate(45deg);
+}
 
 #GridLayout {
   max-width: 900px;
@@ -867,12 +960,147 @@ a {
 /*     border: .6rem solid black; */
 }
 
-.draggable-source--is-dragging {
-  /* background-color: springgreen; */
+#GridLayout > .draggable-source--placed {
+  background-color: pink;
 }
 
-.draggable-source--placed {
-  background-color: pink;
+.draggable--over {
+  background-color: red;
+}
+
+.draggable-mirror {
+  /* background-color: springgreen !important; */
+  transform: rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+#GridLayout1 {
+  max-width: 800px;
+  margin: 0 auto;
+  /* background-color: springgreen;  */
+  display: flex;
+  justify-content: center;
+  padding: 110px;
+}
+
+.GridLayout1 .BlockLayout--typeGrid1 {
+  transform: rotate(-45deg);
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: repeat(4, 6rem);
+  /* grid-gap: 0.8rem; */
+  grid-template-areas:
+  'a b c d'
+  'e f f g'
+  'h f f i'
+  'j k l m';
+}
+
+.BlockWrapper1 {
+  position: relative;
+}
+
+.GridLayout1 .BlockWrapper1:first-child {
+    grid-area: b;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(2) {
+    grid-area: c;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(3) {
+    grid-area: d;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(4) {
+    grid-area: f;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(5) {
+  grid-area: g;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(6) {
+  grid-area: i;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(7) {
+  grid-area: j;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(8) {
+  grid-area: k;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(9) {
+  grid-area: l;
+}
+
+.GridLayout1 .BlockWrapper1:nth-child(10) {
+  grid-area: m;
+}
+
+.BlockWrapper1 .Block1 {
+    height: 100%;
+}
+
+.Block--isDraggable1 {
+    cursor: url(https://shopify.github.io/draggable/assets/img/cursor-drag.png),auto;
+}
+
+.BlockWrapper1 .Block1 {
+    height: 100%;
+}
+
+.Block1 {
+    position: relative;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+}
+
+.Block--isDraggable1 .BlockContent1 {
+    color: #242E5B;
+    background-color: transparent;
+    border-color: currentColor;
+    border: 2px solid #242E5B;;
+    
+    transition: color .12s cubic-bezier(.64,0,.35,1),background-color .12s cubic-bezier(.64,0,.35,1),transform .24s cubic-bezier(.32,1.46,.54,1.28),-webkit-transform .24s cubic-bezier(.32,1.46,.54,1.28);
+}
+
+.BlockContent1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    min-height: 5rem;
+    height: 100%;
+    color: #242E5B;;
+    background-color: white;
+/*     border: .6rem solid black; */
+}
+
+#GridLayout > .draggable-source--placed {
+  /* background-color: pink; */
+}
+
+.draggable--over {
+  background-color: red;
+}
+
+/* .draggable-mirror {
+  background-color: springgreen !important;
+  transform: rotate(-45deg);
+} */
+
+.draggable-mirror {
+  display: inline-block;
 }
 
 
